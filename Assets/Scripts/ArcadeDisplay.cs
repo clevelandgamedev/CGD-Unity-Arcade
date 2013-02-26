@@ -3,14 +3,25 @@ using System.Collections;
 
 public class ArcadeDisplay : MonoBehaviour 
 {
-	public string gameID;
+	public string triggerID;
+	int gameID;
 	// Use this for initialization
 	void Start () 
 	{
-		gameID = gameObject.name;
+		triggerID = gameObject.name;
+	}
+	//Seaches the MDA in DataLoad matching the triggerID with the applicable Array
+	void DataConnection()
+	{
+		for (int x = 0; x < DataLoad.gameData.GetLength(0); x++) 
+		{
+			if(DataLoad.gameData[x,0].Equals(triggerID))
+			{
+				int gameID = x;
+			}	
+		}	
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
 		
@@ -23,7 +34,7 @@ public class ArcadeDisplay : MonoBehaviour
 		if(collider.gameObject.tag == "Player")
 		{
 			Debug.Log("Trigger Arcade");
-			Debug.Log ("gameID: " + gameID);
+			Debug.Log ("triggerID: " + triggerID + " gameID: " + gameID + " Game Name: " + DataLoad.gameData[gameID, 1]);
 			banner.renderer.enabled = true;
 			light.light.enabled = true;
 			//banner.renderer.material.SetTexture("_MainTex", PlayerTemp);

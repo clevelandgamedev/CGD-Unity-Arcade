@@ -4,13 +4,12 @@ using System.Collections.Generic;
 
 public class WorldLoad : MonoBehaviour 
 {	
-	public static int numOfGames = 10;
+	public static int numOfGames = DataLoad.gameData.GetLength(0);
 	float stageSize = (numOfGames * 20) + 10;
 	float newPosArcade = -7.0f;
 	float newPosFloor = -21.0f;
 	float newPosBackStop = -21.0f;
-	
-	//public string[] g1 = {"2","5","2"};
+
 	void Start () 
 	{
 		for(int i = 0; i < numOfGames; i++)
@@ -25,7 +24,7 @@ public class WorldLoad : MonoBehaviour
 		GameObject BackStop = GameObject.Find ("BackStop");
 		
 		Vector3 v3_FloorPos = new Vector3((stageSize*.5f)-25.0f, 0f, -2.5f);
-		Vector3 v3_BackStopPos = new Vector3((stageSize*.5f)-25.0f,10f, 0f);
+		Vector3 v3_BackStopPos = new Vector3((stageSize*.5f)-25.0f,10f, -0.5f);
 		
 		Vector3 v3_FloorSize = new Vector3(stageSize, 4.0f, 10.0f);
 		Vector3 v3_BackStopSize = new Vector3(stageSize, 20.0f, 1.0f);

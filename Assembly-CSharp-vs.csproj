@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ArcadeDisplay.cs" />
      <Compile Include="Assets\Scripts\ArcadeOff.cs" />
+     <Compile Include="Assets\Scripts\DataLoad.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\WorldLoad.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
