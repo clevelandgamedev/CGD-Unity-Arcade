@@ -7,8 +7,8 @@ public class DataLoad : MonoBehaviour
 	{
 		//{"Game ID","Game Name","Author","Description","ScreenShot","GameLocation"}
 		{"g0","The Amazing Atom","Strangelet Studios","This was a game made for the April 2012 Ludum Dare","\\images\\ss\\taa.jpg","\\games\\taa\\taa.exe"}, 
-		{"","","","","",""}, 
-		{"","","","","",""}
+		{"g1","Transplant","","","",""}, 
+		{"g2","A Short Tail","","","",""}
 	};
 	// Use this for initialization
 	void Start () 

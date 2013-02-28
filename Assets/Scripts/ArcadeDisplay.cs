@@ -8,7 +8,7 @@ public class ArcadeDisplay : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		triggerID = gameObject.name;
+		
 	}
 	//Seaches the MDA in DataLoad matching the triggerID with the applicable Array
 	void DataConnection()
@@ -17,7 +17,7 @@ public class ArcadeDisplay : MonoBehaviour
 		{
 			if(DataLoad.gameData[x,0].Equals(triggerID))
 			{
-				int gameID = x;
+				gameID = x;
 			}	
 		}	
 	}
@@ -33,7 +33,9 @@ public class ArcadeDisplay : MonoBehaviour
 		GameObject light = GameObject.Find("light_banner");
 		if(collider.gameObject.tag == "Player")
 		{
+			triggerID = gameObject.name;
 			Debug.Log("Trigger Arcade");
+			DataConnection();
 			Debug.Log ("triggerID: " + triggerID + " gameID: " + gameID + " Game Name: " + DataLoad.gameData[gameID, 1]);
 			banner.renderer.enabled = true;
 			light.light.enabled = true;
